@@ -1,0 +1,1 @@
+export {FormComponet} from './FormComponet';
