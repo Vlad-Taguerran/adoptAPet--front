@@ -1,12 +1,12 @@
 import { Box, Button,Dialog, DialogActions, DialogContent, DialogTitle, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import { useFormik } from 'formik';
-import { SchemaValidationPet, enumCategory, enumStatus } from "../../../../schemas/petSchema";
+import { SchemaValidationPet, enumCategory, enumStatus } from "../../schemas/petSchema";
 import { DatePicker } from '@mui/x-date-pickers';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { useState } from "react";
-import { addPet } from "../../../../services/pet.service";
-import { useModalPetStore } from "../../../../stories/Pets.stories";
+import { addPet } from "../../services/pet.service";
+import { useModalPetStore } from "../../stories/Pets.stories";
 
 export function FormComponet() {
   const {isRegisterOpen, closeRegister} = useModalPetStore();

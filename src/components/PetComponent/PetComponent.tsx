@@ -1,5 +1,5 @@
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Modal, Typography } from "@mui/material";
-import { useModalPetStore } from "../../../../stories/Pets.stories";
+import { useModalPetStore } from "../../stories/Pets.stories";
 import {  VolunteerActivism } from "@mui/icons-material";
 import { pink } from "@mui/material/colors";
 import { format, parseISO } from "date-fns";

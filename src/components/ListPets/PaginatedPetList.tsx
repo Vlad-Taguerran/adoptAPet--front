@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ListItemButton, ListItemAvatar, Avatar, ListItemText, ListItemIcon, Box, Pagination } from '@mui/material';
-import { Pets } from '../../../../types';
+import { Pets } from '../../types';
 import PetsIcon  from '@mui/icons-material/Pets';
 
 
