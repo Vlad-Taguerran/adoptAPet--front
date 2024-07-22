@@ -1,10 +1,10 @@
 import { Container } from "@mui/material";
-import { FormComponet } from "../../components/formComponent/components";
+import {ListPets } from "../../components/formComponent/components";
 
 function HomePage() {
   return(
     <Container>
-      <FormComponet/>
+      <ListPets/>
     </Container>
   )
 }
