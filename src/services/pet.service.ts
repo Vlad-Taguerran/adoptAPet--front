@@ -1,10 +1,9 @@
 import { PetFormValues, Pets } from "../types";
-
-
-const url =  "http://localhost:8080/api/pet";
+import { API_BASE_URL } from "../config/api.config";
+import axios from "axios";
 
 export const listPets = async ()=>{
- const  response = await fetch(url,{
+ const  response = await fetch(API_BASE_URL,{
   mode:"cors"
  });
  const data: Pets[] = await response.json();
@@ -17,12 +16,21 @@ export const addPet = async (petData: PetFormValues)=>{
     formData.append(key, value);
   });
 
-const response = await fetch(url,{
+const response = await fetch(API_BASE_URL,{
   method:"post",
   mode: "cors",
   body: formData
 })
-console.log("TESTE")
-const data = await response.json();
+const data: Response = await response;
 return data
+}
+
+export const adoptPet = async (id: string)=>{
+  try {
+    await axios.patch(`${API_BASE_URL}/${id}`,{
+    })
+  } catch (error) {
+    console.log(error) 
+  }
+ 
 }

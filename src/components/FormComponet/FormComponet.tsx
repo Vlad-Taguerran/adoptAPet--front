@@ -23,7 +23,12 @@ export function FormComponet() {
     validationSchema: SchemaValidationPet,
     onSubmit: async(values) => {
       try {
-        await addPet(values)
+        const res = await addPet(values)
+        console.log(res)
+        if(res.ok){
+          closeRegister();
+          formik.resetForm()
+        }
       } catch (error) {
         console.log(error)
       }
