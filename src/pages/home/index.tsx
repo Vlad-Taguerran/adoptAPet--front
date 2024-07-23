@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import {ListPets } from "../../components/formComponent/components";
+import {ListPets } from "../../components";
 
 function HomePage() {
   return(

@@ -1,5 +1,5 @@
 import { Container } from "@mui/material";
-import { FormComponet } from "../../components/formComponent/components";
+import { FormComponet } from "../../components";
 
 function Register() {
   return(

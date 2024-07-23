@@ -1,30 +1,53 @@
-# React + TypeScript + Vite
+# Meu Projeto React com Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto React configurado com Vite para um desenvolvimento rápido e eficiente. Abaixo estão as instruções para iniciar e contribuir para o projeto.
 
-Currently, two official plugins are available:
+## Sumário
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Scripts Disponíveis](#scripts-disponíveis)
+- [Estrutura do Projeto](#estrutura-do-projeto)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Pré-requisitos
 
-- Configure the top-level `parserOptions` property like this:
+Antes de começar, certifique-se de ter o Node.js 18^ e o yarn instalado em seu computador. Você pode baixar a versão mais recente do Node.js [aqui](https://nodejs.org/).
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Instalação
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. **Clone o repositório:**
+
+   ```bash
+   git clone https://github.com/Vlad-Taguerran/adoptAPet--front
+   cd adoptAPet-front
+# Instale as dependências do projeto
+yarn install
+
+## Uso
+  para modo dev:
+    yarn dev
+  para deploy:
+    yarn buuld 
+
+## Scripts Disponíveis
+
+  `yarn dev`: Inicia o servidor de desenvolvimento.
+  `yarn build`: Cria uma versão otimizada para produção na pasta `dist`.
+  `yarn preview`: Visualiza a versão de produção localmente.
+
+## Estrutura do Projeto
+
+my-react-vite-project/
+├── public/               # Arquivos públicos estáticos
+├── src/                  # Código-fonte do projeto
+│   ├── assets/           # Imagens e outros recursos estáticos
+│   ├── components/       # Componentes React
+│   ├── App.jsx           # Componente principal da aplicação
+│   └── main.jsx          # Ponto de entrada da aplicação
+├── .gitignore            # Arquivos e pastas a serem ignorados pelo Git
+├── index.html            # Arquivo HTML principal
+├── package.json          # Dependências e scripts do projeto
+├── README.md             # Documentação do projeto
+└── vite.config.js        # Configurações do Vite

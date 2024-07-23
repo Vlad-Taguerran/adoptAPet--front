@@ -1,9 +1,10 @@
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Modal, Typography } from "@mui/material";
-import { useModalPetStore } from "../../../../stories/Pets.stories";
+import { useModalPetStore } from "../../stories/Pets.stories";
 import {  VolunteerActivism } from "@mui/icons-material";
 import { pink } from "@mui/material/colors";
 import { format, parseISO } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import { adoptPet } from "../../services/pet.service";
 
 export function PetComponent() {
   const  { isOpen, closeModal, pet } = useModalPetStore()
@@ -45,7 +46,7 @@ export function PetComponent() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="medium" endIcon={<VolunteerActivism sx={{ color: pink[500]}}/>}>Adotar</Button>
+        <Button size="medium"  onClick={()=>{ adoptPet(pet.id)}} endIcon={<VolunteerActivism sx={{ color: pink[500]}}/>}>Adotar</Button>
       </CardActions>
     </Card>
        </Box>

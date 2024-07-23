@@ -1,6 +1,6 @@
 import { Box, Button, List,Typography } from "@mui/material";
 import { PetComponent } from "../PetComponent";
-import { useModalPetStore } from "../../../../stories/Pets.stories";
+import { useModalPetStore } from "../../stories/Pets.stories";
 import { useEffect, useState } from "react";
 import { FormComponet } from "../FormComponet";
 import PaginatedPetList from "./PaginatedPetList";
